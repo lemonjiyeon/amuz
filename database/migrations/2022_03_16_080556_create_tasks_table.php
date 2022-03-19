@@ -15,17 +15,15 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             // 글 번호
-            $table->increments('id');
-            // 사용자가 작성한 글
-            $table->text('memo');
+            $table->text('user_id');
+            // 게시물의 고유번호
+            $table->id('contentNum');
             // 사용자 이름
             $table->text('writer');
-            // 게시물의 고유번호
-            $table->integer('contentNum');
-            // 같은 고유번호 내의 댓글 순서
-            $table->integer('sort')->nullable();
-            // 같은 그룹 내 댓글 계층
-            $table->integer('depth')->nullable();
+            // 제목
+            $table->text('title');
+            // 사용자가 작성한 글
+            $table->text('memo');
             $table->timestamps();
         });
     }

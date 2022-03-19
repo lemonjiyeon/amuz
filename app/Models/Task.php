@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
+
+    protected $table = 'tasks';
+
+    protected $primaryKey = 'contentNum';
+
+    protected $fillable =
+    ['user_id','title','writer','memo','contentNum','created_at','updated_at'];
 }
