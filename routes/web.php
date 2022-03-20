@@ -33,7 +33,7 @@ Route::post('/join', 'UserController@register');
 // 로그인
 Route::get('/login', 'UserController@loginForm')->name('login');
 Route::post('/login', 'UserController@login');
-Route::post('/logout', 'UserController@logout');
+Route::get('/logout', 'UserController@logout');
 
 
 //Auth::routes();

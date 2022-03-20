@@ -104,7 +104,7 @@ class UserController extends Controller
     // 로그아웃 메소드
     public function logout(){
         auth()->logout();
-        return redirect('pages.index');
+        return redirect()->route('list');
     }
 
 }

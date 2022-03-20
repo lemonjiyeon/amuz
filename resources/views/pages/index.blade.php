@@ -8,12 +8,20 @@
 <div class="container"><h1>게시판</h1>
 
 <ul class="nav justify-content-end">
-  <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="http://localhost:8000/login">로그인</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="http://localhost:8000/join">회원가입</a>
-  </li>
+   @if (Route::has('login'))
+     @auth
+     <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href={{ route('logout')}}>로그아웃</a>
+      </li>
+   @else
+    <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href={{ route('login')}}>로그인</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href={{ route('join')}}>회원가입</a>
+    </li>
+    @endauth
+  @endif
 </ul>
 </div>
 

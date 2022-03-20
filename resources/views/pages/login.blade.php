@@ -20,7 +20,7 @@
             <br>
 
     <button type="submit" class="mb-3 btn btn-primary">로그인</button>
-    <button type="submit" class="mb-3 btn btn-primary" onclick="http://localhost:8000/join">회원가입</button>
+    <button type="submit" class="mb-3 btn btn-primary" onclick={{ route('join')}}>회원가입</button>
     </div>
     </form>
 </div>
