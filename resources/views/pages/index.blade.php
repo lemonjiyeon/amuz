@@ -11,6 +11,9 @@
    @if (Route::has('login'))
      @auth
      <li class="nav-item">
+        <a class="nav-link"><?=$email?>님 </a>
+      </li>
+     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href={{ route('logout')}}>로그아웃</a>
       </li>
    @else
